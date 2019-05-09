@@ -1,0 +1,13 @@
+[package]
+name = "pyext-myrustlib"
+version = "0.1.0"
+authors = ["pradeepchhetri <pradeepchhetri4444@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "myrustlib"
+crate-type = ["cdylib"]
+
+[dependencies.cpython]
+version = "0.2.1"
+features = ["extension-module"]
