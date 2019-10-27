@@ -1,2 +1,9 @@
 /target
 **/*.rs.bk
+*.pyc
+*.pyd
+*.so
+*.dylib
+*.c
+*.h
+__pycache__/
