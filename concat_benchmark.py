@@ -1,4 +1,5 @@
 import libmyrustlib
+import libmynimlib
 
 iterations = 1000
 
@@ -28,3 +29,6 @@ def test_concat_comprehensions(benchmark):
 
 def test_concat_rust(benchmark):
     benchmark(libmyrustlib.rust_concat, iterations)
+
+def test_concat_nim(benchmark):
+    benchmark(libmynimlib.nim_concat, iterations)
