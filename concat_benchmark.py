@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import libmyrustlib
 
 iterations = 1000
@@ -28,3 +30,15 @@ def test_concat_comprehensions(benchmark):
 
 def test_concat_rust(benchmark):
     benchmark(libmyrustlib.rust_concat, iterations)
+
+def test_concat_rust_reserve(benchmark):
+    benchmark(libmyrustlib.rust_concat_reserve, iterations)
+
+def test_concat_rust_logdigits(benchmark):
+    benchmark(libmyrustlib.rust_concat_logdigits, iterations)
+
+def test_concat_rust_buffer(benchmark):
+    benchmark(libmyrustlib.rust_concat_buffer, iterations)
+
+def test_concat_rust_inplace(benchmark):
+    benchmark(libmyrustlib.rust_concat_inplace, iterations)
