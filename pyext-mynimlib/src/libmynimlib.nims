@@ -1,0 +1,13 @@
+# This is only config, to save some typing.
+--define:danger
+--opt:speed
+--gc:markAndSweep
+--app:lib
+--forceBuild
+--out:libmynimlib.so
+--passC:"-flto"
+--passC:"-ffast-math"
+--passC:"-march=native"
+--passC:"-mtune=native"
+--passC:"-fsingle-precision-constant"
+--passL:"-s"

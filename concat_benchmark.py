@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import libmyrustlib
+import libmynimlib
 
 iterations = 1000
 
@@ -42,3 +43,6 @@ def test_concat_rust_buffer(benchmark):
 
 def test_concat_rust_inplace(benchmark):
     benchmark(libmyrustlib.rust_concat_inplace, iterations)
+
+def test_concat_nim(benchmark):
+    benchmark(libmynimlib.nim_concat, iterations)
